@@ -697,8 +697,8 @@ header input[type="search"]::-ms-input-placeholder,*/
     list-style-position: inside;
 }
 
-#main-navigation nav.menu-first-level > ul,
-#main-navigation nav.menu-sub-level > ul{
+#main-navigation nav.menu-first-level > ul:not(.mobile-only),
+#main-navigation nav.menu-sub-level > ul:not(.mobile-only){
     margin: 0;
     padding: 0;
     display: flex;
@@ -841,6 +841,11 @@ header input[type="search"]::-ms-input-placeholder,*/
     display: none;
 }
 /* Menu for mobile END --------------------------------------- */
+
+/* ----------------- For Desctop ----------------------------- */
+.mobile-only {
+    display: none;
+}
 
 @media only screen and (max-width: 990px) {
     html, body {
@@ -1011,16 +1016,20 @@ header input[type="search"]::-ms-input-placeholder,*/
     }
 
     #main-navigation nav.menu-first-level > ul,
-    #main-navigation nav.menu-sub-level > ul {
+    #main-navigation nav.menu-first-level > ul:not(.mobile-only),
+    #main-navigation nav.menu-sub-level > ul,
+    #main-navigation nav.menu-sub-level > ul:not(.mobile-only) {
         margin: 0;
         padding: 0;
         display: block;
         flex-wrap: unset;
     }
 
-    #main-navigation nav.menu-first-level > ul {
+    #main-navigation nav.menu-first-level > ul,
+    #main-navigation nav.menu-first-level > ul:not(.mobile-only) {
         display: flex;
         flex-direction: column;
+        margin-bottom: 6px;
     }
 
     #main-navigation nav.menu-first-level > ul > li,
@@ -1079,6 +1088,34 @@ header input[type="search"]::-ms-input-placeholder,*/
 
     #main-navigation nav.menu-first-level > ul > li.online-calc > a::before {
         background-position: 0 -100px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.login-link > a::before {
+        background-position: 0 -120px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.compare-link > a::before {
+        background-position: 0 -140px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.favorite-link > a::before {
+        background-position: 0 -160px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.about-link > a::before {
+        background-position: 0 -180px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.payment-link > a::before {
+        background-position: 0 -200px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.delivery-link > a::before {
+        background-position: 0 -220px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.partnership-link > a::before {
+        background-position: 0 -240px;
     }
 
     #main-navigation nav.menu-first-level .catalog {
