@@ -849,7 +849,8 @@ header input[type="search"]::-ms-input-placeholder,*/
 
 @media only screen and (max-width: 990px) {
     html, body {
-        font-size: 1.14rem;
+        /*font-size: 1.14rem;*/
+
     }
     html{
         min-width: auto;
@@ -1050,6 +1051,7 @@ header input[type="search"]::-ms-input-placeholder,*/
     #main-navigation nav.menu-sub-level > ul > li > a,
     #main-navigation nav.menu-first-level > ul > li.online-calc > a,
     #main-navigation nav.menu-first-level > ul > li.sale > a{
+        position: relative;
         text-transform: inherit;
         display: inline;
         color: #000000;
@@ -1057,7 +1059,7 @@ header input[type="search"]::-ms-input-placeholder,*/
         vertical-align: middle;
         height: auto;
         padding: 0 0 0 52px;
-        line-height: 3.5;
+        line-height: 2.93;
     }
 
     #main-navigation nav.menu-first-level > ul > li > a::before {
@@ -1065,13 +1067,45 @@ header input[type="search"]::-ms-input-placeholder,*/
         height: 20px;
         width: 20px;
         content: "";
-        position: relative;
-        top: 2px;
-        left: 0;
-        margin: 0 9px 0 0;
+        position: absolute;
+        top: 50%;
+        left: 23px;
+        margin: -10px 0 0 0;
         background-repeat: no-repeat;
         background-image: url("../images/nav-icons.gif");
         background-position: 0 0;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.region-link > a::after,
+    #main-navigation nav.menu-first-level > ul > li.catalog > a::after,
+    #main-navigation nav.menu-first-level > ul > li.about-link > a::after {
+        display: inline-block;
+        height: 13px;
+        width: 13px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        margin: -6px 0 0 0;
+        background-repeat: no-repeat;
+        background-image: url("../images/nav-arrow.png");
+        background-position: 0 0;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.about-link > a::after {
+        background-position: 0 -13px;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.region-link > a > span {
+        color: #9d9d9d;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.region-link > a::before {
+        background-position: 0 0;
+    }
+
+    #main-navigation nav.menu-first-level > ul > li.adress-link > a::before {
+        background-position: 0 -20px;
     }
 
     #main-navigation nav.menu-first-level > ul > li.catalog > a::before {
@@ -1162,7 +1196,7 @@ header input[type="search"]::-ms-input-placeholder,*/
     #main-navigation nav.menu-first-level > ul > li.sale > a,
     #main-navigation nav.menu-first-level > ul > li.installation-teams > a {
         display: block;
-        padding: 0 23px;
+        padding: 0 23px 0 50px;
     }
 
     /* main navigation second level */
